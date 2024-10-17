@@ -1,10 +1,10 @@
 export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+  let task = false; // Use let instead of var
+  let task2 = true; // Use let instead of var
 
   if (trueOrFalse) {
-    let task = true;  // block-scoped, won't affect outer `task`
-    let task2 = false; // block-scoped, won't affect outer `task2`
+    let task = true;  // This task is now scoped to the block
+    let task2 = false; // This task2 is now scoped to the block
   }
 
   return [task, task2];
